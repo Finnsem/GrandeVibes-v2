@@ -1,0 +1,40 @@
+<div class="hero-container">
+    <div class="overlay">
+        <div class="content">
+            
+            <div>
+              <h1 class="hero-title">Countdown to Eternal Sunshine Album <br>8th March 2024 12:00 AM</h1>
+              <h3>{{ days }} days, {{ hours }} hours, {{ minutes }} minutes, {{ seconds }} seconds</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Embedded video -->
+
+<!-- Embedded video -->
+<div *ngIf="videoUrl" class="video-container">
+    <button class="exit-button" (click)="closeVideoPlayer()">Exit</button>
+    <iframe class="embed-responsive-item" [src]="videoUrl" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"  allowfullscreen></iframe>
+  </div>
+  
+  
+  <!-- Song list -->
+  <div class="container">
+    <h1 >Top Picks Just for You</h1>
+    <div class="row song-list">
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4" *ngFor="let song of arianaSongs">
+        <div class="card h-100">
+          <img class="card-img-top" [src]="song.snippet.thumbnails.high.url" alt="Thumbnail">
+          <div class="card-body">
+            <h5 class="card-title">{{ song.snippet.title }}</h5>
+            <p class="card-text">{{ song.snippet.description }}</p>
+            <button class="btn " (click)="watchVideo(song.id.videoId)">Watch Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p >All Right Reserved | GrandeVibes  © 2024. Design and Development by Ammar Hafiz</p>
+  </footer>

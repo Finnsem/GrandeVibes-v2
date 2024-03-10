@@ -1,0 +1,206 @@
+
+@font-face {
+    font-family: 'Eternal Sunshine';
+    src: url('src\assets\eternal sunshine typeface.ttf') format('truetype');
+}
+
+/* Use the custom font for specific elements */
+h1, h2, h3, h5, button, p,form {
+    font-family: 'Eternal Sunshine', sans-serif; /* Fallback to sans-serif if font fails to load */
+
+}
+
+/* Ensure the hero container covers the entire viewport */
+.hero-container {
+    filter: blur(80%); /* Apply a 10% blur effect */
+    height: 100vh;
+
+}
+.form-control{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Overlay for hero section */
+.overlay { 
+    
+    background-image : url('src/assets/hero.jpg');
+    background-size: cover; /* Cover entire area */
+    background-position: center center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1; /* Ensure overlay is above song list */
+    background-attachment: scroll;
+
+}
+
+   
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for Firefox */
+html {
+    scrollbar-width: none;
+}
+
+body {
+    scrollbar-width: none;
+    -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer, Edge */
+}
+h1{
+    font-size: 45px;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+.btn {
+    background-color: transparent; /* Transparent background */
+    border: 1px solid white; /* White border */
+    color: white; /* White text color */
+    width: 100%; /* Make button full width */
+  }
+  
+  .btn:hover {
+    background-color: white; /* Change background color on hover */
+    border-color: white; /* Change border color on hover */
+    color: black; /* Change text color on hover */
+  }
+/* Content inside hero section */
+.content {
+    z-index: 2; /* Ensure content appears above overlay */
+    
+}
+
+/* Search form styling */
+.search-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.search-form .form-control {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.search-form .btn {
+    width: 100%;
+}
+
+/* Card styling */
+.card {
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+    .search-form {
+        max-width: none;
+        width: 100%;
+    }
+}
+
+/* Additional styles for hero section */
+.hero-title {
+    font-size: 100px;
+    overflow: hidden;
+    border-right: .005em solid rgb(255, 255, 255); /* Simulate cursor */
+    white-space: nowrap; /* Keep the text in a single line */
+    margin: 0 auto; /* Center the text */
+    padding: 10px;
+    display: inline-block;
+    width: auto;
+    animation: typing 3s steps(20, end), blink-caret .75s step-end infinite;
+    font-size: 40px;
+  }
+  
+  /* Typewriter animation */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+
+
+.btn-primary {
+    background-color: #f96332;
+    border-color: #f96332;
+}
+
+.btn-primary:hover {
+    background-color: #d9411e;
+    border-color: #d9411e;
+}
+
+/* Song list styling */
+.song-list {
+    padding-top: 0px; /* Adjust as needed */
+    padding-bottom: 0px; /* Adjust as needed */
+   
+   
+    color: #FFFFFF; /* Text color */
+    padding: 0px;
+}
+/* Embedded video styling */
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    z-index: 9999; /* Ensure the video appears above other content */
+    padding: 20px; /* Add padding for theater mode effect */
+  }
+  
+  .embed-responsive-item {
+    width: 100%;
+    height: calc(100% - 40px); /* Adjust height for padding */
+  }
+  
+  /* Song list styling */
+
+
+  /* Exit button styling */
+.exit-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #b80000;
+    color: #ffffff;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 10000; /* Ensure the button appears above the video */
+  }
+  
+  .exit-button:hover {
+    background-color: #ccc;
+  }
+  footer{
+    background-color: #290000;
+    padding-top: 10px;
+    padding: 10px;
+    text-align: center;
+    position: absolute;
+    width: 100%; /* Make the footer span the full width */
+    bottom: 5; /* Position the footer at the bottom of its containing element */
+    left: 0;
+  }

@@ -1,0 +1,53 @@
+.overlay { 
+    
+    background-image : url('src/assets/search.jpg');
+    background-size: cover; /* Cover entire area */
+    background-position: center center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1; /* Ensure overlay is above song list */
+    background-attachment: scroll;
+
+}
+
+@font-face {
+    font-family: 'Eternal Sunshine';
+    src: url('src\assets\eternal sunshine typeface.ttf') format('truetype');
+}
+
+/* Use the custom font for specific elements */
+h1, h2, h3, h5, button, p {
+    font-family: 'Eternal Sunshine', sans-serif; /* Fallback to sans-serif if font fails to load */
+}
+
+p{
+    font-size: 30px;
+    padding-left: 30%;
+    padding-right: 30%;
+}
+footer{
+    background-color: #290000;
+    padding-top: 10px;
+    padding: 10px;
+    text-align: center;
+    position: absolute;
+    width: 100%; /* Make the footer span the full width */
+    bottom: 5; /* Position the footer at the bottom of its containing element */
+    left: 0;
+  }
+  @media (max-width: 768px) {
+    p {
+        font-size: 20px; /* Smaller font size for smaller devices */
+        padding-left: 10%; /* Less padding for smaller screens */
+        padding-right: 10%;
+    }
+}

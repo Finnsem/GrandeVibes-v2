@@ -1,0 +1,20 @@
+<nav >
+    <div >
+      <a  [routerLink]="['/home']" routerLinkActive="router-link-active">GrandeVibes</a>
+      <ul >
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/home']" routerLinkActive="router-link-active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/find']" routerLinkActive="router-link-active">Search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/aboutus']" routerLinkActive="router-link-active">About</a>
+        </li>
+      </ul>
+      <form class="d-lg-flex"> <!-- Search bar always visible on large screens -->
+        <input class="form-control me-sm-2" type="text" placeholder="Search videos..." [(ngModel)]="searchQuery" (keyup.enter)="searchVideos()">
+      </form>
+    </div>
+  </nav>
+  
